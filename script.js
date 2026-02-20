@@ -84,7 +84,8 @@ const galleries = {
     podcast: [
         'assets/podcast/langgraph界面.png',
         'assets/podcast/飞书文档界面.png',
-        'assets/podcast/飞书多维表格界面.png'
+        'assets/podcast/飞书多维表格界面.png',
+        'assets/podcast/飞书通知.png'
     ]
 };
 

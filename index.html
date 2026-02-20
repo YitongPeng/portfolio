@@ -194,8 +194,8 @@
                         </p>
                         <ul class="project-desc">
                             <li>从0到1主导产品规划与落地，为连锁养发馆设计预约系统、会员卡管理和AI智能咨询功能，定义北极星指标为月度线上预约完成数</li>
-                            <li>设计并实现混合检索RAG系统（向量+BM25+RRF融合），结合意图分类，实现智能养发咨询，回答准确率从60%提升至90%，控制AI咨询成本</li>
-                            <li>完成全栈开发与生产部署，解决隐私协议等合规问题，通过微信审核上线</li>
+                            <li>设计并实现混合检索RAG系统(ChromaDB向量检索 + BM25关键词匹配 + RRF融合排序)，结合关键词意图分类，构建覆盖83个文档块的养发知识库；回答准确率从60%提升至90%，AI响应时间5-6秒，月度API成本从¥80压缩至¥27(-66%)</li>
+                            <li>基于FastAPI + SQLite + 微信小程序原生开发完成(顾客端+员工端)全栈实现，解决隐私协议等合规问题，完成生产部署并通过微信审核上线</li>
                         </ul>
                         <div class="project-actions">
                             <button class="btn btn-small" onclick="openGallery('yancare')">小程序图片预览</button>
@@ -223,8 +223,9 @@
                             <span class="tag">飞书API</span>
                         </p>
                         <ul class="project-desc">
-                            <li>基于LangGraph编排5个AI Agent，自动完成英文科技播客的RSS采集→语音转写→翻译→智能总结→飞书发布全链路，日均处理3集播客</li>
-                            <li>使用本地Whisper模型实现零成本语音转写，DeepSeek翻译+总结成本控制在每月27元以内</li>
+                            <li>基于LangGraph编排5个AI Agent(采集，下载，ASR转写，翻译，总结发布)，实现9个英文科技播客RSS源的全链路自动化处理，日均稳定处理3集，节点状态可追踪</li>
+                            <li>使用本地faster-whisper模型实现零成本语音转写，DeepSeek API完成英译中翻译与结构化总结(含AI/科技专业术语表对齐)，翻译+总结成本约¥0.15-0.30/集</li>
+                            <li>自动将处理结果发布至飞书多维表格、Daily Brief汇总文档并推送群通知，结合SQLite做增量去重与状态管理</li>
                         </ul>
                         <div class="project-actions">
                             <button class="btn btn-small" onclick="openGallery('podcast')">项目效果预览</button>
